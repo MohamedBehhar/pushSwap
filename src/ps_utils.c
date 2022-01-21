@@ -6,7 +6,7 @@
 /*   By: mbehhar <mbehhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 12:39:30 by mbehhar           #+#    #+#             */
-/*   Updated: 2022/01/06 09:50:39 by mbehhar          ###   ########.fr       */
+/*   Updated: 2022/01/20 16:35:31 by mbehhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ t_node	*creat_node(int data)
 	new_node = NULL;
 	new_node = (t_node *)malloc(sizeof(t_node));
 	if (!new_node)
+	{
+		free(new_node);
 		return (NULL);
+	}
 	new_node->data = data;
 	new_node->prev = NULL;
 	new_node->next = NULL;

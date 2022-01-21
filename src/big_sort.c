@@ -1,43 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sortingTest.c                                      :+:      :+:    :+:   */
+/*   big_sort.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbehhar <mbehhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 12:11:05 by mbehhar           #+#    #+#             */
-/*   Updated: 2022/01/06 12:40:19 by mbehhar          ###   ########.fr       */
+/*   Created: 2022/01/15 11:04:59 by mbehhar           #+#    #+#             */
+/*   Updated: 2022/01/20 19:00:34 by mbehhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	simpleSort(t_stack *stack)
+void	ft_radix_sort(t_stack *stack_a, t_stack *stack_b)
 {
-	t_node	*ptr;
-	int		i;
+	int	i;
+	int	size;
+	int	shifter;
 
-	if (!stack->head)
-		return ;
-	ptr = stack->head;
-	i = -1;
-	while (++i < stack->size - 1)
+	size = stack_a->size;
+	shifter = 0;
+	while (is_sorted(stack_a) == 0)
 	{
-		if (ptr->data > ptr->next->data)
+		i = -1;
+		while (++i < size)
 		{
-			sa(stack);
-			ft_putnbr_fd(i, 1);
-			ft_putstr_fd("===>sa\n", 1);
-			print_stack(stack->head);
+			if (((stack_a->head->index >> shifter) & 1) == 1)
+				ra(stack_a, 1);
+			else
+				pb(stack_a, stack_b, 1);
 		}
-		ptr = ptr->next;
+		while (stack_b->size)
+			pa(stack_a, stack_b, 1);
+		shifter++;
 	}
-	if (ptr->data < ptr->prev->data)
-	{
-		sa(stack);
-			ft_putnbr_fd(i, 1);
-		ft_putstr_fd("===>rra\n", 1);
-			print_stack(stack->head);
-	}
-	
 }

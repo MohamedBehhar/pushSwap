@@ -6,13 +6,13 @@
 /*   By: mbehhar <mbehhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 12:47:17 by mbehhar           #+#    #+#             */
-/*   Updated: 2022/01/06 09:53:32 by mbehhar          ###   ########.fr       */
+/*   Updated: 2022/01/19 13:14:53 by mbehhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sa(t_stack *stack)
+void	sa(t_stack *stack, int i)
 {
 	t_node	*old_head;
 	t_node	*new_head;
@@ -31,9 +31,11 @@ void	sa(t_stack *stack)
 		stack->last = old_head;
 	old_head->prev = new_head;
 	new_head->next = old_head;
+	if (i == 1)
+		ft_putstr_fd("sa\n", 1);
 }
 
-void	sb(t_stack *stack)
+void	sb(t_stack *stack, int i)
 {
 	t_node	*old_head;
 	t_node	*new_head;
@@ -52,10 +54,12 @@ void	sb(t_stack *stack)
 		stack->last = old_head;
 	old_head->prev = new_head;
 	new_head->next = old_head;
+	if (i == 1)
+		ft_putstr_fd("sb\n", 1);
 }
 
-void	ss(t_stack *stack_a, t_stack *stack_b)
+void	ss(t_stack *stack_a, t_stack *stack_b, int i)
 {
-	sa(stack_a);
-	sa(stack_b);
+	sa(stack_a, i);
+	sa(stack_b, i);
 }

@@ -6,7 +6,7 @@
 /*   By: mbehhar <mbehhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 11:49:23 by mbehhar           #+#    #+#             */
-/*   Updated: 2022/01/06 09:59:45 by mbehhar          ###   ########.fr       */
+/*   Updated: 2022/01/20 18:54:25 by mbehhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,23 @@
 
 void	handle_error(char *str)
 {
-	ft_putstr_fd("\033[0;31m\e[1m==Error==\n", 1);
+	ft_putstr_fd("\033[0;31m\e[1mError\033[0m\n", 1);
 	ft_putstr_fd(str, 1);
 	exit(0);
+}
+
+int	is_sorted(t_stack *stack)
+{
+	t_node	*ptr;
+
+	ptr = stack->head;
+	while (ptr->next)
+	{
+		if (ptr->data > ptr->next->data)
+			return (0);
+		ptr = ptr->next;
+	}
+	return (1);
 }
 
 long	push_swap_atoi(const char *str)
@@ -36,6 +50,8 @@ long	push_swap_atoi(const char *str)
 			sign *= -1;
 		i++;
 	}
+	if (!ft_isdigit(str[i]))
+		return (-1);
 	while (ft_isdigit(str[i]))
 	{
 		res = res * 10 + (str[i] - '0');
