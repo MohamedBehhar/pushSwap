@@ -19,6 +19,7 @@ The goal of this project is to sort an array of integers using the fewest number
 **rb**	:	rotate b - shift up all elements of stack b by 1. The first element becomes the last one.
 **rr**	:	ra and rb at the same time.
 **rra**	:	reverse rotate a - shift down all elements of stack a by 1. The last element becomes the first one.
+**koko**
 
 ## Gif
 
