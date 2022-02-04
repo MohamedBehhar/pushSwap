@@ -58,7 +58,8 @@ I push back the elements in stack_B to stack_A while sorting them, to do this, I
 the biggest elements in stack_B and push it back to stack_A then rotate stack_A to place that element under the median, i do the same for the 
 smallest element in stack_B bui do keep it it the top of stack_A and not rotating it until stack_B is empty.
 
-***The Third step***:
+***The Third step:***
+
 Now that we have the first half (belew the median) sorted, we gonna do the same for the second half of the stack
 (above the median), and Congratulation :D you make it.
 
