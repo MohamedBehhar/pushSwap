@@ -23,7 +23,7 @@ The goal of this project is to sort an array of integers using the fewest number
 
 ## Gif
 
-![PushSwap-video (2)](https://user-images.githubusercontent.com/43113421/152562315-f16d530a-6ec9-4b96-8f7b-a9ac34ef01a5.gif)
+![Untitled](https://user-images.githubusercontent.com/43113421/152566457-b4d64590-283e-47c5-811b-1ea9ef54fad2.gif)
 
 
 ## Algorithm
