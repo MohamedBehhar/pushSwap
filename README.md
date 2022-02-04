@@ -11,15 +11,16 @@
 
 The goal of this project is to sort an array of integers using the fewest number possible of  the given instructions :
 
-**sa**	:	swap a - swap the first 2 elements at the top of stack a.
-**sb**	:	swap b - swap the first 2 elements at the top of stack b. 
-**ss**	:	sa and sb at the same time.
-**pa**	:	push a - take the first element at the top of b and put it at the top of a. 
-**pb**	:	push b - take the first element at the top of a and put it at the top of b. 
-**ra**	:	rotate a - shift up all elements of stack a by 1. The first element becomes the last one.
-**rb**	:	rotate b - shift up all elements of stack b by 1. The first element becomes the last one.
-**rr**	:	ra and rb at the same time.
-**rra**	:	reverse rotate a - shift down all elements of stack a by 1. The last element becomes the first one.
+- **sa**	:	swap a - swap the first 2 elements at the top of stack a.
+- **sb**	:	swap b - swap the first 2 elements at the top of stack b.
+- **ss**	:	sa and sb at the same time.=
+- **pa**	:	push a - take the first element at the top of b and put it at the top of a.=
+- **pb**	:	push b - take the first element at the top of a and put it at the top of b. 
+- **ra**	:	rotate a - shift up all elements of stack a by 1. The first element becomes the last one.
+- **rb**	:	rotate b - shift up all elements of stack b by 1. The first element becomes the last one.
+- **rr**	:	ra and rb at the same time.
+- **rra**	:	reverse rotate a - shift down all elements of stack a by 1. The last element becomes the first one.
+
 
 ## Gif
 
